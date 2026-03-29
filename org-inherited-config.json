@@ -1,0 +1,26 @@
+// -*- mode: jsonc; -*-
+// ref: <https://docs.renovatebot.com/config-overview/#how-its-found>
+{
+  "$schema": "https://docs.renovatebot.com/renovate-inherited-schema.json",
+  "extends": [
+    "config:best-practices",
+    ":assignAndReview(liblaf)",
+    ":automergeAll"
+  ],
+  "gitIgnoredAuthors": [
+    "41898282+github-actions[bot]@users.noreply.github.com",
+    "66853113+pre-commit-ci[bot]@users.noreply.github.com",
+    "114827586+autofix-ci[bot]@users.noreply.github.com",
+    "184555210+liblaf[bot]@users.noreply.github.com",
+    "239320757+liblaf-mega-linter[bot]@users.noreply.github.com"
+  ],
+  "ignoreDeps": ["python", "pytorch", "pytorch3d"],
+  "platformAutomerge": false,
+  "copier": {
+    // copier is not well-supported by renovate, so we disable it for now
+    // see also: <https://github.com/renovatebot/renovate/discussions/33640>
+    // see also: <https://github.com/renovatebot/renovate/discussions/41438>
+    // see also: <https://github.com/renovatebot/renovate/issues/39938>
+    "enabled": false
+  }
+}

@@ -21,6 +21,16 @@
     {
       "matchCategories": ["ci"],
       "semanticCommitType": "ci"
+    },
+    {
+      "enabled": false,
+      "matchFileNames": [
+        // copier templates
+        ".github/workflows/python-*.yaml",
+        ".github/workflows/release-*.yaml",
+        ".github/workflows/shared-*.yaml",
+        ".github/workflows/typescript-*.yaml"
+      ]
     }
   ],
   "platformAutomerge": false
